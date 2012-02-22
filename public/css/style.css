@@ -1,0 +1,58 @@
+/******************************************
+Conway Game of Life
+Author: Kibet Yegon
+http://kibyegon.wordpress.com
+*******************************************/
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f1f4ea;
+    font-size: 10px;
+    font-family: verdana, arial, sans-serif;
+    color: #6d756a;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.world_container {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size:  16px;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #3f4447;
+    border-bottom: 1px solid #6d756a;
+    padding-bottom: 1px;
+    text-decoration: none;
+}
+
+#world {
+    border: 1px solid #000;
+    background-color: #f1f4ea;
+    float: left;
+    margin: 5px;
+    padding: 1px;
+}
+
+#world td {
+    padding: 3px;
+}
+
+#world .dead {
+    background-color: #8ab945;
+}
+
+#world .alive {
+    background-color: #354447;
+}

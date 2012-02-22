@@ -1,0 +1,15 @@
+=Conway Game of Life (Sinatra App)
+This is a work in progress conway game of life written in ruby using Sinatra,
+Json and Rspec for testing
+
+=Testing
+To run the specs:
+
+  rake spec
+  
+=Running
+You need at least ruby 1.8.7 (rvm install 1.8.7). 1.9.2 should be fine though 
+not tested yet. Just run.
+  rackup config.ru
+  
+2012 Kibet Yegon. This code is distributed under the WTFPL license.

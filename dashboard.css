@@ -1,0 +1,464 @@
+/******************************************
+Name:
+Date: 2010-06-11
+Author: Kibet Yegon
+URL: http://kibyegon.blogspot.com
+*******************************************/
+
+/* Standard elements */
+
+body {
+	background: #e8d8a8;
+        margin: 0px;
+        font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+}
+#container
+{
+	margin: 0; /* to change to a full width layout change this to margin: 0; */
+	background-color: #f1f4ea;
+	background-image: url(../images/dashboard_sidebar.png);
+	background-repeat: repeat-y;
+	background-position: right;
+	color: #000;
+}
+.topbar {
+    background-color: #584a37;
+    background-image: url(../images/topBar.png);
+    height: 30px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+.topbar #topnav {
+    position:absolute;
+    top:4px; right:25px;
+    height:25px;
+    background:url(../images/topnav_left.png) no-repeat;
+}
+.topbar #topnav .topnav_repeat {
+    font-size: 11px;
+    display:block;
+    height:22px;
+    padding:3px 10px;
+    background:url(../images/topnav_right.png) no-repeat top right;
+}
+.topbar #topnav .topnav_repeat span {
+    text-transform: capitalize;
+    font-weight:bold;
+    display:block;
+    padding:0 10px;
+    float:left;
+}
+.topbar #topnav .topnav_repeat a {
+    text-transform: capitalize;
+    font-weight:bold;
+    display:block;
+    padding:0 10px;
+    float:left;
+    color:#4f4231;
+    border-right:1px solid #c7b865;
+    text-decoration:none;
+}
+.topbar #topnav .topnav_repeat a:hover { color:#3d2b0c; }
+#container #banner
+{
+	background-color: #36291c;
+	border: 0;
+	color: #fce878;
+        height: 50px;
+}
+
+#container #banner h1
+{
+	margin: 0;
+	padding: .6em;
+}
+
+/*globalnav*/
+.tabnav {
+    width: 100%;
+    position: relative;
+}
+#globalnav {
+	position: relative;
+	float: left;
+	width: inherit;
+	padding: 0 0 0 2.2em;
+	margin: 0;
+	list-style: none;
+	line-height: 1em;
+        background: #36291c;
+        font-size: 14px;
+}
+
+#globalnav li {
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+#globalnav a {
+	display:block;
+	color: #fff;
+	text-decoration:none;
+	font-weight:normal;
+	background: #90bc18;
+	margin:0;
+	padding:0.25em 1em 0.50em 1em;
+	border-left:4px solid #36291c;
+	border-right:4px solid #36291c;
+}
+
+#globalnav a:hover,
+#globalnav a:active,
+#globalnav a.active:link,
+#globalnav a.active:visited {
+	background: #A4A39E;
+        color: #FFF;
+}
+
+#globalnav a.active:link,
+#globalnav a.active:visited {
+	position:relative;
+	z-index:102;
+}
+#container #sidebar
+{
+	float: right;
+	width: 235px;
+	padding: 1em 1.4em 0 1.4em;
+        min-height: 300px;
+}
+#container #content
+{
+	padding-top: 1em;
+	margin: 4em 200px 2em 3em;
+	width: 950px;
+        font-size: 12px;
+}
+hr {
+    height: 1px;
+    background-color: #d4debb;
+    margin: 0 0 10px 0;
+    border: 0;
+    width: 920px;
+
+}
+h2 {
+    color: #628316;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    text-transform:  uppercase;
+}
+h3 {
+    color: #628316;
+    font-size: medium;
+    margin-bottom: 10px;
+    padding: 0;
+    text-transform: capitalize;
+}
+#container #content h2 { margin-top: 0; }
+/* Form */
+fieldset
+{
+    width: 810px;
+}
+legend
+{
+    color: #628316;
+    font-size: medium;
+    font-weight: bold;
+}
+.form
+{
+    padding: 5px 0 5px 5px;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    position: relative;
+}
+.form label
+{
+    font-weight: normal;
+    font-size: 13px;
+    color: #36291c;
+
+}
+.form .t_field {
+    float: right;
+}
+.form textarea {
+    width: 410px;
+    height: 100px;
+    float: left;
+    margin-right: 0.2em;
+    display: block;
+}
+.form tr {
+    padding-bottom: 5px;
+}
+.form .submit {
+    padding-top: 20px;
+}
+#user_listings
+{
+    width: 100%;
+    border:1px solid #BEC7A8;
+    border-collapse:collapse;
+    margin: 10px 0 0 0;
+}
+#user_listings th
+{
+    font-size: 13px;
+    border-bottom:1px solid #BEC7A8;
+    padding:3px 7px 2px 7px;
+    margin-right: 30px;
+}
+#user_listings td
+{
+    font-size: 13px;
+    border-bottom:1px solid #BEC7A8;
+    padding:3px 7px 2px 7px;
+    margin-right: 30px;
+    height: 60px;
+    width: auto;
+}
+#user_listings th
+{
+    font-size:12px;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#D4DEBB;
+    color:#36291C;
+}
+#user_listings .odd
+{
+    background-color:#fff;
+    height: auto;
+}
+#user_listings .even
+{
+    background-color:#F1F4EA;
+    height: auto;
+}
+#user_listings desc
+{
+    background-color: #ccc;
+}
+#user_listings .row_actions a
+{
+    font-size: 10px;
+    padding-right: 10px;
+    margin: 0;
+    color: #C56F0E;
+}
+#user_listings a
+{
+    text-align: left;
+    font-weight: normal;
+    padding: 5px 5px 5px 5px;
+    font-size: 12px;
+    margin: 10px 0;
+    color: #628316;
+    text-decoration: none;
+}
+#user_listings .listing_data
+{
+    text-align: left;
+    font-weight: normal;
+    font-size: 12px;
+    color: #628316;
+}
+#user_listings a:hover {
+    color: #36291C;
+}
+#listings_widget
+{
+    width: 450px;
+    border:1px solid #BEC7A8;
+    border-collapse:collapse;
+    margin: 15px 0 0 0;
+    float:left;
+}
+#listings_widget td, #listings_widget th
+{
+    font-size: 13px;
+    border-bottom:1px solid #BEC7A8;
+    padding:10px 7px 2px 7px;
+    margin-right: 30px;
+}
+#listings_widget th
+{
+    font-size:12px;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#D4DEBB;
+    color:#36291C;
+}
+#listings_widget .odd
+{
+    background-color:#fff;
+    height: auto;
+}
+#listings_widget .even
+{
+    background-color:#F1F4EA;
+    height: auto;
+}
+#listings_widget desc
+{
+    background-color: #ccc;
+}
+#listings_widget .row_actions a
+{
+    font-size: 10px;
+    padding-right: 10px;
+    margin: 0;
+    color: #C56F0E;
+}
+#listings_widget a
+{
+    text-align: left;
+    font-weight: normal;
+    padding: 5px 5px 5px 5px;
+    font-size: 12px;
+    margin: 10px 0;
+    color: #36291C;
+    text-decoration: none;
+}
+#listings_widget .listing_data
+{
+    text-align: left;
+    font-weight: normal;
+    font-size: 12px;
+    color: #628316;
+}
+#listings_widget a:hover {
+    color: #628316;
+}
+#messages_widget
+{
+    width: 450px;
+    border:1px solid #BEC7A8;
+    border-collapse:collapse;
+    margin: 0 40px 0 0;
+    float:right;
+}
+#messages_widget td, #messages_widget th
+{
+    font-size: 12px;
+    border-bottom:1px solid #BEC7A8;
+    padding:10px 7px 10px 7px;
+    margin-right: 30px;
+}
+#messages_widget th
+{
+    font-size:12px;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#D4DEBB;
+    color:#36291C;
+}
+#messages_widget .odd
+{
+    background-color:#fff;
+    height: auto;
+}
+#messages_widget .even
+{
+    background-color:#F1F4EA;
+    height: auto;
+}
+#messages_widget .message_author
+{
+    font-size: 11px;
+    font-weight: 600;
+    padding-left: 5px;
+}
+#messages_widget a
+{
+    text-align: left;
+    font-weight: normal;
+    padding: 5px 5px 5px 5px;
+    font-size: 12px;
+    margin: 10px 0;
+    color: #36291C;
+    text-decoration: none;
+}
+#messages_widget a:hover {
+    color: #628316;
+}
+/* Flash messages */
+#notice {
+    border: 1px solid #fcdd30;
+    padding: 1em;
+    margin-bottom: 2em;
+    color: #36281b;
+    width: 300px;
+    background-color: #ffffe0;
+    font: 500 smaller sans-serif;
+}
+#flash_notice, #flash_error {
+    padding: 5px 8px;
+    margin: 10px 0;
+}
+
+#flash_notice {
+    background-color: #f4ead5;
+    border: solid 1px #fd8603;
+}
+
+#flash_error {
+    background-color: #f4ead5;
+    border: solid 1px #fd8603;
+}
+
+.fieldWithErrors {
+    display: inline;
+}
+
+#errorExplanation {
+    width: 418px;
+    border: 2px solid #CF0000;
+    padding: 0px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    background-color: #ffebe8;
+}
+
+#errorExplanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: 0;
+    background-color: #c93737;
+    color: #fff;
+}
+
+#errorExplanation p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 8px;
+}
+
+#errorExplanation ul {
+    margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+    font-size: 12px;
+    list-style: disc;
+}
+#container #footer
+{
+	clear: both;
+	background-color: #36291c;
+	padding: 1em;
+	text-align: center;
+	color: #fce878;
+	font-size: 10px;
+}
