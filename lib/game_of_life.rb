@@ -58,10 +58,26 @@ class Game
     end
     
     # north_west, south_east connections
-    # TODO implement this
-    
-    # south_west, north_east connections
-    # TODO implement this  
+    first = 0
+    last = @world.size-1
+    @world.each_with_index do |row, row_index|
+      row.each_with_index do |cell, cell_index|
+        unless row_index == first || row_index == last
+          if cell_index == 0
+          cell.north_east = @world[row_index-1][cell_index+1]
+          cell.south_east = @world[row_index+1][cell_index+1]
+          elsif cell_index == last
+          cell.north_west = @world[row_index-1][cell_index-1]
+          cell.south_west = @world[row_index+1][cell_index-1]
+          else
+          cell.north_east = @world[row_index-1][cell_index+1]
+          cell.south_east = @world[row_index+1][cell_index+1]
+          cell.south_west = @world[row_index+1][cell_index-1]
+          cell.north_west = @world[row_index-1][cell_index-1]
+          end
+        end
+      end
+    end  
   end
     
   def automata
@@ -88,8 +104,8 @@ end
   
 game = Game.new(30)
 game.create_connections
-# 450.times { game.bring_to_life(rand(30), rand(30)) }
-game.bring_to_life(3,3)
-game.bring_to_life(4,3)
-game.bring_to_life(5,3)
+250.times { game.bring_to_life(rand(30), rand(30)) }
+# game.bring_to_life(3,3)
+# game.bring_to_life(4,3)
+# game.bring_to_life(5,3)
 game.automata
