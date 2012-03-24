@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require 'cell'
+require "#{File.dirname(__FILE__)}/cell"
 
-class Game
+class GameOfLife
     
   attr_accessor :world
     
@@ -77,7 +77,9 @@ class Game
           end
         end
       end
-    end  
+    end
+    
+    return @world  
   end
     
   def automata
@@ -102,7 +104,7 @@ class Game
   end
 end
   
-game = Game.new(30)
+game = GameOfLife.new(30)
 game.create_connections
 250.times { game.bring_to_life(rand(30), rand(30)) }
 # game.bring_to_life(3,3)
